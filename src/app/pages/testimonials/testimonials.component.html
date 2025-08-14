@@ -1,0 +1,52 @@
+<section class="bg-white w-100 py-4">
+    <div class="container d-flex flex-column justify-content-center align-content-center py-5">
+        <h1 class="text-center fw-bold py-5">Lo que dicen nuestros
+            <span class="main-text-gradiant fw-lighter fw-bold">clientes</span>
+        </h1>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                @for (testimonial of testimonials; track $index) {
+                <div class="carousel-item" [class.active]="$index === 0">
+                    <div class="card text-center border-subtitle-blue  rounded p-4 mx-auto" style="max-width: 700px;">
+                        <div class="fs-5 mb-2">
+                            @for (star of [1, 2, 3, 4, 5]; track star) {
+                            <span [class.text-warning]="star <= testimonial.starts" class="text-secondary">★</span>
+                            }
+                        </div>
+                        <p class="text-muted fw-semibold fs-5">
+                            "{{testimonial.Message}}."
+                        </p>
+                        <div class="d-flex align-items-center justify-content-center gap-3 mt-2">
+                            <div class="rounded-circle bg-info text-white d-flex align-items-center justify-content-center"
+                                style="width: 48px; height: 48px; font-weight: bold;">
+                                {{testimonial.initials}}
+                            </div>
+                            <div class="text-start">
+                                <strong class="text-primary">{{testimonial.Name}}</strong><br>
+                                <small class="text-muted">{{testimonial.position}}, {{testimonial.company}}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+
+            <button class="carousel-control-prev custom-control" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="custom-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next custom-control" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="custom-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+body {
+
+    --c-grey: #4b5563;
+    --c-subtitle-blue: #2563eb;
+    --c-deep-blue: #1e3a8a;
+    --c-light-color: #dbeafe;
+
+    letter-spacing: 0.01em;
+    font-size: 1vw;
+    user-select: none;
+}
+
+.main-button {
+    border: none;
+    color: white;
+
+}
+
+.second-button {
+    border: 1px solid var(--c-subtitle-blue);
+    color: var(--c-subtitle-blue);
+    background-color: transparent;
+
+}
+
+.main-button,
+.second-button {
+    width: fit-content;
+    padding: 0.45rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.border-subtitle-blue {
+    border-color: var(--c-light-color);
+    border-width: 1;
+}
+
+.main-text-gradiant {
+    background: linear-gradient(to right, #2563eb, #027f39); // blue-600 to cyan-500
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-background-gradiant {
+    background: linear-gradient(to right, #2563eb, #027f39); // blue-600 to cyan-500
+}
+
+.second-background-gradiant {
+    background: linear-gradient(to right, #dbeafe, #cffafe);
+}
+
+.background-gradiant {
+    background: linear-gradient(to bottom right, #eff6ff, #ecfeff);
+}
+
+
+
+//Small
+@media (max-width: 767px) {
+    p {
+        font-size: 3.2vw;
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .main-button,
+    .second-button {
+        font-size: 2vw;
+    }
+}
+
+//md
+@media (min-width: 767px) and (max-width: 991px) {
+    p {
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+    }
+
+}
+
+//large
+@media (min-width: 992px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,71 @@
+section {
+    padding-block: 4rem;
+    margin-top: 6rem;
+
+    .bdge {
+        color: var(--c-subtitle-blue);
+        border-color: #bfdbfe;
+        width: fit-content;
+    }
+
+    p {
+        max-width: 55%;
+        color: var(--c-grey);
+    }
+
+    img {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+    }
+}
+
+
+//Small
+@media (max-width: 766px) {
+    section {
+        .bdge {
+            font-size: 2vw;
+        }
+
+        p {
+            max-width: 100%;
+        }
+
+        h1 {
+            font-size: 6.75vw;
+        }
+
+        p {
+            font-size: 3vw;
+        }
+    }
+}
+
+//md
+@media (min-width: 767px) and (max-width: 991px) {
+    .bdge {
+        font-size: 1.25vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    p {
+        font-size: 1.25rem;
+    }
+}
+
+//large
+@media (min-width: 992px) {
+    .bdge {
+        font-size: 0.65vw;
+    }
+
+    h1 {
+        font-size: 4.5rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,25 @@
+<section class="bg-white w-100">
+    <div class="container d-flex flex-column justify-content-center align-content-center py-5">
+        <h2 class="text-center fw-bold py-2">Características que
+            <span class="main-text-gradiant fw-lighter fw-bold">marcan la diferencia</span>
+        </h2>
+
+        <p class="mx-auto text-center">
+            Descubre por qué es buena idea confíar en NotiSafe para sus comunicaciones críticas
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2 w-100">
+            @for (feature of features; track $index) {
+            <div class="col">
+                <div class="card-b">
+                    <div class="card-icon mb-3">
+                        <i [className]="feature.icon"></i>
+                    </div>
+                    <h4>{{feature.feacture}}</h4>
+                    <small>{{feature.description}}</small>
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

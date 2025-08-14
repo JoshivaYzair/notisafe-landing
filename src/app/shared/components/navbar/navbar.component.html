@@ -1,0 +1,54 @@
+<!--
+<header class="bg-white fixed-top">
+    <section class="container d-flex flex-row align-items-center p-2 justify-content-between">
+        <div class="d-flex justify-content-center align-items-center gap-2 text-center">
+            <img src="/assets/notisafe-logo.png" alt="">
+            <span class="fw-bold main-text-gradiant">NotiSafe</span>
+        </div>
+
+        <nav class="d-flex gap-4">
+            <a class="text-decoration-none text-dark" href="#features">Caracteristicas</a>
+            <a class="text-decoration-none text-dark" href="#pricing">Precios</a>
+            <a class="text-decoration-none text-dark" href="#contact">Contacto</a>
+        </nav>
+    </section>
+
+    
+
+</header>
+-->
+
+<header class="bg-white fixed-top">
+    <nav class="navbar navbar-expand-md bg-white container">
+        <div class="d-flex align-items-center gap-2">
+            <img src="/assets/notisafe-logo.png" alt="">
+            <span class="fw-bold main-text-gradiant">NotiSafe</span>
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Menú -->
+        <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#features"
+                        [class.active]="activeSection === 'features'"
+                        (click)="setActive('features')">Características</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#pricing"
+                        [class.active]="activeSection === 'pricing'"
+                        (click)="setActive('pricing')">Precios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#contact"
+                        [class.active]="activeSection === 'contact'" 
+                        (click)="setActive('contact')">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>

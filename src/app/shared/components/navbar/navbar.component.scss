@@ -1,0 +1,31 @@
+img {
+    width: 42px;
+    height: 42px;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    background: linear-gradient(to right, #2563eb, #027f39);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #2563eb, #027f39) 1;
+}
+
+span,
+a {
+    font-size: 1.1rem;
+}
+
+//Small
+@media (max-width: 767px) {
+    header {
+        display: block;
+    }
+}
+
+//md
+@media (min-width: 767px) and (max-width: 991px) {}
+
+//large
+@media (min-width: 992px) {}

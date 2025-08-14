@@ -1,0 +1,74 @@
+.card-b {
+    padding: 1.3rem;
+    border-radius: 10px;
+    border: 1px solid var(--c-light-color);
+
+    .card-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 7px;
+        background-color: var(--c-light-color);
+        width: 3rem;
+        height: 3rem;
+    }
+
+    small {
+        font-size: .85rem;
+    }
+
+    i {
+        color: var(--c-deep-blue);
+    }
+
+}
+
+h6,
+h3 {
+    color: var(--c-deep-blue);
+}
+
+h5 {
+    color: var(--c-subtitle-blue);
+}
+
+
+//Small
+@media (max-width: 766px) {
+    i {
+        font-size: 1.3rem;
+    }
+}
+
+//md
+@media (min-width: 767px) and (max-width: 991px) {
+    i {
+        font-size: 1.3rem;
+    }
+}
+
+//large
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    small {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    i {
+        font-size: .90rem;
+    }
+}
+
+//extra-large
+@media (min-width: 1200px) {
+
+    p,
+    i {
+        font-size: 1.1rem;
+    }
+}

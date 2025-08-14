@@ -1,0 +1,33 @@
+<section class="w-100">
+    <div class="container d-flex flex-column justify-content-center align-content-center py-5">
+        <h2 class="text-center fw-bold py-2">Planes que se adaptan a
+            <span class="main-text-gradiant fw-lighter fw-bold">tus necesidades</span>
+        </h2>
+
+        <p class="mx-auto text-center">
+            Descubre por qué es buena idea confíar en NotiSafe para sus comunicaciones críticas
+        </p>
+
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2 w-100">
+            @for (plan of plans; track $index) {
+            <div class="col">
+                <div class="card border-subtitle-blue text-center rounded p-4">
+                    <h5 class="fw-bold fs-4">{{plan.title}}</h5>
+                    <small>{{plan.subtitle}}</small>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <h2 class="main-text-gradiant fw-bold">{{plan.currency}}{{plan.price}}</h2>
+                        <small class="fs-6">{{plan.period}}</small>
+                    </div>
+
+                    @for (feature of plan.features; track $index) {
+                    <div class="d-flex align-items-center gap-3 py-1">
+                        <i class="fa-regular fa-circle-check text-success"></i>
+                        <p class="mb-0">{{feature}}</p>
+                    </div>
+                    }
+                </div>
+            </div>
+            }
+        </div>
+    </div>
+</section>

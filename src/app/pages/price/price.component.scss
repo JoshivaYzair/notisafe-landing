@@ -1,0 +1,46 @@
+
+
+h5 {
+    color: var(--c-deep-blue);
+}
+
+small {
+    font-size: 1rem;
+}
+
+p,
+i {
+    font-size: 1rem;
+}
+
+//Small
+@media (max-width: 766px) {}
+
+//md
+@media (min-width: 767px) and (max-width: 991px) {}
+
+//large
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    small {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p,
+    i {
+        font-size: .90rem;
+    }
+}
+
+//extra-large
+@media (min-width: 1200px) {
+
+    p,
+    i {
+        font-size: 1.1rem;
+    }
+}
